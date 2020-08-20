@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/lightbox.css">
 
     </head>
     <body>
@@ -56,41 +57,52 @@
         <div class="section-3 container-fluid" >
             <div class="gallery grid" id="gallery">
               <div class="column">
-                <img src="img/wedding.jpg"  width="416px" height="277px" alt="image" class="img img-fluid">
+                <a href="img/wedding.jpg" data-lightbox="lightbox"><img src="img/wedding.jpg"  width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
               </div>
 
               <div class="column">
-                <img src="img/shoes.jpg" width="416px" height="277px" alt="image" class="img img-fluid ">
+                <a href="img/shoes.jpg" data-lightbox="lightbox"><img src="img/shoes.jpg" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
               </div>
 
               <div class="column">
-                <img src="img/gamer.jpg" width="416px" height="277px" alt="image" class="img img-fluid ">
+                <a href="img/gamer.jpg" data-lightbox="lightbox"><img src="img/gamer.jpg" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
               </div>
 
               <div class="column">
-                <img src="img/study.jpg"  width="416px" height="277px" alt="image" class="img img-fluid ">
+                <a href="img/study.jpg" data-lightbox="lightbox"><img src="img/study.jpg"  width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
               </div>
 
               <div class="column">
-                <img src="img/lovers.jpg" width="416px" height="277px" alt="image" class="img img-fluid ">
+                <a href="img/lovers.jpg" data-lightbox="lightbox"><img src="img/lovers.jpg" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
               </div>
 
               <div class="column">
-                <img src="img/studio.jpg" alt="image" class="img img-fluid ">
+                <a href="img/studio.jpg" data-lightbox="lightbox"><img src="img/studio.jpg" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
               </div>
             </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close" id="close">&times;</span>
+        
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+        
+            <!-- Modal Caption (Image Text) -->
+            <!-- <div id="caption"></div> -->
         </div>
 
         <div class="section-4">
             <div class="row">
                 <div class="col-md-8 container">
-                    <!-- <img src="img/apple.jpeg" alt="" class="img-fluid"> -->
                     <div class="about">
                         <div class="about--text">
                             <h1>We offer Clients security</h1>
                            <p>
-                                In BOVphotography,We offer our clients long lasting securities of their pictures,
-                                we get keep our clients pictures in our database for future retrieval in case they lose it, strictly with their consent.
+                                We get keep our clients pictures in our database for future retrieval in case they lose it, strictly with their consent.
                            </p>
                         </div>
 
@@ -104,28 +116,28 @@
                         <div class="about--text">
                             <h1>Best quality pictures </h1>
                             <p>
-                                BOVphotography offers her client best quality pictures and comfortable customer services in her studio and outside the studio
+                                BOVphotography offers her client best quality pictures and comfortable customer services in her studio and outside the studio.
                             </p>
                         </div>
                         
                         <div class="about--text">
                             <h1>We offer fast delivery</h1>
                             <p>
-                                We offer our clients fast and quick delivery of their pictures in whatever format they want it
+                                We offer our clients fast and quick delivery of their pictures in whatever format they want it.
                             </p>
                         </div>
 
                         <div class="about--text">
                             <h1>We offer great Outdoor shoot</h1>
                             <p>
-                                BOVphotography offers her clients the option of taking pictures outside of the studio at affordable price
+                                BOVphotography offers her clients the option of taking pictures outside of the studio at affordable price.
                             </p>
                         </div>
                         
                         <div class="about--text">
-                            <h1>We offer fast delivery</h1>
+                            <h1>Chance for negotiation of payments</h1>
                             <p>
-                                We offer our clients fast and quick delivery of their pictures in whatever format they want it
+                                BOVphotography offers her client the freedom to negotiate their payments and payment process to their comfort.
                             </p>
                         </div>
                     </div>
@@ -137,7 +149,7 @@
 
                         <p  class="comment-text">"The best decision of our lives"</p>
                         <p  class="comment-text-2">"Giving our Wedding shoot to this company <br> is one of the best decisions we've made together as a couple!!!"</p>
-                        <p  class="comment-text-3">-Mr & Mrs AHshshh</p>
+                        <p  class="comment-text-3">-Client name</p>
 
                     </div>
 
@@ -146,7 +158,7 @@
 
                         <p  class="comment-text">"My 21st Birthday pictures made my birthday great"</p>
                         <p  class="comment-text-2">BOV photography handled my birthday shoot and I honestly can stop thinking about how great the pictures turned out to be</p>
-                        <p  class="comment-text-3">-Mr Akdkdkfk</p>
+                        <p  class="comment-text-3">-Client Name</p>
 
                     </div>
                 </div>
@@ -216,7 +228,7 @@
                         </li>
 
                         <li>
-                            <a href="https://wa.link/8hcynb">
+                            <a href="https://wa.me/message/CFCNF7NRZT3LI1">
                                 <svg class="icon">
                                     <use xlink:href='img/sprite2.svg#icon-whatsapp' class="use"></use>
                                 </svg>
@@ -241,6 +253,7 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-
+        <script src="js/main.js"></script>
+        <script src="js/lightbox.min.js"></script>
     </body>
 </html>
