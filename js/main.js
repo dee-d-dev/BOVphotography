@@ -1,33 +1,64 @@
-// Get the modal
-var modal = document.getElementById('myModal');
+//Select images
+let modalTrigger = document.querySelector('#myImg');
+let modalDisplay = document.querySelector('#modalDisplay');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-// var captionText = document.getElementById("caption");
 
-//The close button
-var close = document.getElementById('close');
+//select close button
+let closeBtn = document.querySelector('.close');
 
-img.addEventListener('click', Change);
+//add click event to modal trigger
+// modalTrigger.addEventListener('click', clickEvent);
 
-function Change(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    modalImg.alt = this.alt;
-    // captionText.innerHTML = this.alt;
+
+//Function to be executed when event is clicked
+function clickEvent(){
+  modalDisplay.style.display = 'block';
+
 }
 
-close.addEventListener('click', close);
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+//Add close event to close button
+closeBtn.addEventListener('click', closeButton);
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+//function to close the button
+function closeButton(){
+  modalDisplay.style.display = 'none';
 }
 
-// function Close(){
-//     modal.style.display = 'none';
-// }
+//slides
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName('mySlides');
+  var dots = document.getElementsByClassName('column');
+
+  if(n > slides.length){
+    slideIndex = 1
+  }
+
+  if(n < 1) {
+    slideIndex = slides.length
+  }
+
+  for(i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for(i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("active", "") 
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+
+
 

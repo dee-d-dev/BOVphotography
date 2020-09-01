@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/lightbox.css">
+        <!-- <link rel="stylesheet" href="css/lightbox.css"> -->
 
     </head>
     <body>
@@ -28,10 +28,8 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            About
-                        </a>
+                    <li class="nav-item" class="nav-link">
+                           <a href="#about" class="nav-link"> About</a>
                     </li>
 
                     <li class="nav-item">
@@ -55,54 +53,76 @@
         </div>
 
         <div class="section-3 container-fluid" >
-            <div class="gallery grid" id="gallery">
+             <div class="gallery grid" id="gallery">
               <div class="column">
-                <a href="img/wedding.jpg" data-lightbox="lightbox"><img src="img/wedding.jpg"  width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
+                <img src="img/wedding.jpg" onclick="clickEvent(this); currentSlide(1)" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid gallery-img">
               </div>
 
               <div class="column">
-                <a href="img/shoes.jpg" data-lightbox="lightbox"><img src="img/shoes.jpg" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
+                <img src="img/shoes.jpg" onclick="clickEvent(this); currentSlide(2)" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid gallery-img">
               </div>
 
               <div class="column">
-                <a href="img/gamer.jpg" data-lightbox="lightbox"><img src="img/gamer.jpg" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
+                <img src="img/gamer.jpg" onclick="clickEvent(this); currentSlide(3)" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid gallery-img">
               </div>
 
               <div class="column">
-                <a href="img/study.jpg" data-lightbox="lightbox"><img src="img/study.jpg"  width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
+                <img src="img/study.jpg" onclick="clickEvent(this); currentSlide(4)" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid gallery-img">
               </div>
 
               <div class="column">
-                <a href="img/lovers.jpg" data-lightbox="lightbox"><img src="img/lovers.jpg" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
+                <img src="img/lovers.jpg" onclick="clickEvent(this); currentSlide(5)" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid gallery-img">
               </div>
 
               <div class="column">
-                <a href="img/studio.jpg" data-lightbox="lightbox"><img src="img/studio.jpg" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid"></a>
+                <img src="img/studio.jpg" onclick="clickEvent(this); currentSlide(6)" width="416px" height="277px" id="myImg" alt="image" class="img img-fluid gallery-img">
               </div>
-            </div>
         </div>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
+        <div class="modal" id="modalDisplay">
+            <span class="close">&times;</span>
+            
+                <div class="mySlides">
+                    <img src="img/wedding.jpg" alt="" class="modal-image">
+                </div>
 
-            <!-- The Close Button -->
-            <span class="close" id="close">&times;</span>
-        
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="img01">
-        
-            <!-- Modal Caption (Image Text) -->
-            <!-- <div id="caption"></div> -->
+                <div class="mySlides">
+                    <img src="img/shoes.jpg" alt="" class="modal-image">
+                </div>
+
+                <div class="mySlides">
+                    <img src="img/gamer.jpg" alt="" class="modal-image">
+                </div>
+
+                <div class="mySlides">
+                    <img src="img/study.jpg" alt="" class="modal-image">
+                </div>
+
+                <div class="mySlides">
+                    <img src="img/lovers.jpg" alt="" class="modal-image">
+                </div>
+
+                <div class="mySlides">
+                    <img src="img/studio.jpg" alt="" class="modal-image">
+                </div>
+
+                <div class="navs">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095</a>
+                </div>
+
+
         </div>
+            
 
         <div class="section-4">
-            <div class="row">
-                <div class="col-md-8 container">
-                    <div class="about">
+            <div class="row container">
+                <div class="col-md-8">
+                    <div class="about" id="about">
                         <div class="about--text">
                             <h1>We offer Clients security</h1>
                            <p>
-                                We get keep our clients pictures in our database for future retrieval in case they lose it, strictly with their consent.
+                                We keep our clients pictures in our database for future retrieval in case they lose it, strictly with their consent.
                            </p>
                         </div>
 
@@ -148,7 +168,7 @@
                         <h1 class="oblique comment-head">Client's comment</h1>
 
                         <p  class="comment-text">"The best decision of our lives"</p>
-                        <p  class="comment-text-2">"Giving our Wedding shoot to this company <br> is one of the best decisions we've made together as a couple!!!"</p>
+                        <p  class="comment-text-2">Giving our Wedding shoot to this company <br> is one of the best decisions we've made together as a couple!!!</p>
                         <p  class="comment-text-3">-Client name</p>
 
                     </div>
@@ -157,7 +177,7 @@
                         <h1 class="oblique comment-head">Client's comment</h1>
 
                         <p  class="comment-text">"My 21st Birthday pictures made my birthday great"</p>
-                        <p  class="comment-text-2">BOV photography handled my birthday shoot and I honestly can stop thinking about how great the pictures turned out to be</p>
+                        <p  class="comment-text-2">BOV photography handled my birthday shoot and I honestly can't stop thinking about how great the pictures turned out to be</p>
                         <p  class="comment-text-3">-Client Name</p>
 
                     </div>
@@ -254,6 +274,5 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
         <script src="js/main.js"></script>
-        <script src="js/lightbox.min.js"></script>
     </body>
 </html>
