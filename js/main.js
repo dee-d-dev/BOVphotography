@@ -14,6 +14,7 @@ let closeBtn = document.querySelector('.close');
 function clickEvent(){
   modalDisplay.style.display = 'block';
 
+
 }
 
 //Add close event to close button
@@ -46,7 +47,7 @@ function showSlides(n) {
   }
 
   if(n < 1) {
-    slideIndex = slides.length
+    slideIndex = slides.length;
   }
 
   for(i = 0; i < slides.length; i++) {
@@ -54,31 +55,18 @@ function showSlides(n) {
   }
 
   for(i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace("active", "") 
+    dots[i].className = dots[i].className.replace("active", "");
   }
+
   slides[slideIndex - 1].style.display = "block";
 }
 
+/**************************************************ANOTHER EFFECT**********************/
 
-
-// let i = 0;
-// text = "Welcome to BOVphotography";
-
-// (function typing() {
-//   if(i < text.length) {
-//     document.querySelector('.section-text').innerHTML += text.charAt(i);
-//     i++;
-//     setTimeout(typing, 50);
-//   }
-// })();
-
-
-//TYPEWRITER EFFECT
-
-const TypeWriter = function(sectionText, words, wait = 3000) {
+const TypeWriter = function(sectionText, words, wait) {
   this.sectionText = sectionText;
   this.words = words;
-  this.txt = "";
+  this.txt = '';
   this.wordIndex = 0;
   this.wait = parseInt(wait, 10);
   this.type();

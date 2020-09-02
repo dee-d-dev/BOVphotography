@@ -20,6 +20,7 @@ body{
     grid-row-gap: 2rem;
     grid-column-gap: 6rem;
     padding: 25px;
+    text-align: center;
     /* margin-left: 1rem; */
 }
 
@@ -202,122 +203,14 @@ body{
 
 
 /*********MOBILE VIEW***********/
+
 @media screen and (max-width: 425px){
     .body{
-        font-size: 3rem;
-    }
-    .section-text{
-        font-size: 2.5rem;
-        color: rgb(14, 0, 0);
-        font-weight: 500;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    .about{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 2rem;
-        grid-column-gap: 2rem;
-        padding: .1rem;
-        font-size: 2rem;
-        transform: translateX(-1rem);
-    }
-    
-    .about--text{
         font-size: 1rem;
     }
 
-    .about--text h1{
-        font-size: 2rem;
-    }
-
-    .last-column{
-        margin-left: 2rem;
-    }
-
-    .section-4b{
-        margin: 1rem;
-        box-sizing: border-box;
-    }
-    /***************MODAL*******************/
-
-
-    .modal{
-        display: none;
-        width:100%;
-        height: 100%;
-        z-index: 2;
-        background-color: rgba(3, 3, 3, 0.884);
-    }
-    
-    .modal-image{
-        display: block;
-        width: 100%;
-        border-radius: 10px;
-        animation-name: zoom;
-        animation-duration: 0.5s;
-    }
-
-    .mySlides{
-        margin-top: 20rem;
-        width: 100%;
-        transform: scale(1.6);
-    }
-
-
-    
-    .close{
-        font-size: 6rem;
-        color: white;
-        position: relative;
-        top: 10rem !important;
-        right: 40px;
-        cursor: pointer;
-    }
-
-    .prev,
-    .next{
-        cursor: pointer;
-        position: absolute;
-        width: 3rem;
-        margin-top: -4rem;
-        font-weight: bold;
-        font-size: 3rem;
-        -webkit-user-select: none;
-        user-select: none;
-        color: #000;
-        z-index: 1100;
-        transition: o.2s ease;
-        text-shadow: 1px 1px 10px rgb(255, 255, 255);
-
-    }
-
-
-    .prev{
-        left: 1rem !important;
-
-    }
-
-    .next{
-        right: -.2rem !important;
-    }
-
-
-    .navs{
-        position: relative;
-        top: 10rem;
-    }
-}
-
-
-@media screen and (max-width: 320px){
-    .body{
-        font-size: 3rem;
-    }
-
     .section-text{
-        font-size: 2.5rem;
+        font-size: 2rem !important;
         color: rgb(14, 0, 0);
         font-weight: 500;
         text-align: center;
@@ -326,10 +219,13 @@ body{
 
     .about{
         display: grid;
-        grid-row-gap: 1rem;
+        grid-template-rows: repeat(6, 1fr) !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-gap: .5rem !important;
         padding: 1rem;
         font-size: 5rem;
         transform: translateX(-1rem);
+        margin-top: 1rem;
     }
     
     .about--text{
@@ -345,8 +241,22 @@ body{
     }
 
     .section-4b{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(1, 1fr) !important;
         margin-left: 1rem;
         box-sizing: border-box;
+    }
+
+    .section-5 h1{
+        background-color: #000;
+        color: white;
+        font-size: 2rem !important;
+        box-sizing: border-box;
+    }
+
+    .last .address{
+        width: 100%;
     }
     /***************MODAL*******************/
 
@@ -432,12 +342,12 @@ body{
 
     .about{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-row-gap: 2rem;
-        grid-column-gap: 2rem;
+        grid-column-gap: 6rem;
         padding: .1rem;
         font-size: 2rem;
-        transform: translateX(-1rem);
+        /* transform: translateX(-1rem); */
     }
     
     .about--text{
@@ -455,6 +365,9 @@ body{
     .section-4b{
         margin: 1rem;
         box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, 18rem);
+        grid-gap: 2rem;
     }
     /***************MODAL*******************/
 
@@ -526,7 +439,26 @@ body{
     }
 }
 
+@media screen and (min-width: 1440px) {
 
+    .about{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 8rem;
+        /* transform: translateX(-1rem); */
+    }
+
+    .about--text{
+        font-size: 1rem !important;
+        width: 100%;
+
+    }
+
+    .section-4b{
+        transform: translateX(15rem);
+    }
+}
 
 
 
