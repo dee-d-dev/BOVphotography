@@ -39,7 +39,8 @@ body{
     font-weight: 500;
     text-align: center;
     margin-top: 6rem;
-    
+    transform: translateX(-2.5rem);
+    justify-self: center;
 }
 
 .img {
@@ -66,6 +67,7 @@ body{
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.432), rgba(10, 209, 216, 0.568)),url('../img/main.jpg');
     background-size: cover;
     text-align: center;
+    background-position: center;
     height: 80vh;
     padding: 5rem;
 }
@@ -593,14 +595,18 @@ body{
 }
 
 
-/************ANIMATION****************/
 
 @keyframes zoom {
     0%{
         transform: scale(0);
     }
-
-    100%{
+    
+    100% {
         transform: scale(1);
     }
+}
+
+/*****CURSOR*****/
+h1 > .txt {
+border-right: solid #000 0.2rem;
 }

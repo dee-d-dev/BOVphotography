@@ -61,4 +61,93 @@ function showSlides(n) {
 
 
 
+// let i = 0;
+// text = "Welcome to BOVphotography";
+
+// (function typing() {
+//   if(i < text.length) {
+//     document.querySelector('.section-text').innerHTML += text.charAt(i);
+//     i++;
+//     setTimeout(typing, 50);
+//   }
+// })();
+
+
+//TYPEWRITER EFFECT
+
+const TypeWriter = function(sectionText, words, wait = 3000) {
+  this.sectionText = sectionText;
+  this.words = words;
+  this.txt = "";
+  this.wordIndex = 0;
+  this.wait = parseInt(wait, 10);
+  this.type();
+  this.isDeleting = false;
+}
+
+//Type method
+TypeWriter.prototype.type = function() {
+  //Current word to be used
+  const currentIndex = this.wordIndex % this.words.length;
+
+  //get text of current word
+
+  const currentText = this.words[currentIndex];
+
+  //check if text cleared
+
+  if(this.isDeleting) {
+    //remove text
+    this.txt = currentText.substring(0, this.txt.length - 1);
+
+  } else {
+    //add text
+
+    this.txt = currentText.substring(0, this.txt.length + 1);
+  }
+
+  //insert text into dom element
+  this.sectionText.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+  //initial type speed
+  let typeSpeed = 100;
+
+  if(this.isDeleting) {
+    typeSpeed /= 2;
+  }
+
+  //if word is complete
+  if(!this.isDeleting && this.txt === currentText){
+    //stop at the end
+    typeSpeed = this.wait
+
+    //set delete to true so it starts
+    this.isDeleting = true;
+  } else if(this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    //move to next word
+    this.wordIndex++;
+
+    //pause befpre typing again 
+    typeSpeed = 500;
+  }
+
+  setTimeout(() => this.type(), typeSpeed);
+}
+
+//initialise onload
+document.addEventListener('DOMContentLoaded', init);
+
+//function init
+
+function init() {
+  const sectionText = document.querySelector('.section-text');
+  const words = JSON.parse(sectionText.getAttribute("data-words"));
+  const wait = sectionText.getAttribute('data-wait');
+
+  //init typewriter
+
+  new TypeWriter(sectionText,words,wait);
+
+}
 
