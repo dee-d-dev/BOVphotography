@@ -218,6 +218,15 @@ body{
         margin-top: 1rem;
     }
 
+    .section-4-text {
+        background-color: #fff;
+        padding: 1rem;
+        margin-bottom: 4rem;
+        transform: skewX(0deg);
+        box-shadow: 10px 5px 25px rgba(160, 149, 149, 0.685);
+        
+    }
+
     .about{
         display: grid;
         grid-template-rows: repeat(6, 1fr) !important;
@@ -245,8 +254,11 @@ body{
         display: grid;
         grid-template-rows: repeat(2, 1fr) !important;
         grid-template-columns: repeat(1, 1fr) !important;
-        margin-left: 1rem;
+        /* margin-left: 5px; */
         box-sizing: border-box;
+        min-width: 20rem;
+        transform: translateX(-3rem);
+        
     }
 
     .section-5 h1{
